@@ -36,10 +36,7 @@ export default{
     methods:{
     
     fetchData : function(){
-        const agent = new httpsAgent({  
-        rejectUnauthorized: false
-        });
-        axios.get('https://covid19.soficoop.com/country/us/', { httpsAgent: agent}).then(response=>{
+        axios.get('https://covid19.soficoop.com/country/us').then(response=>{
         this.results=response.data.snapshots
         // console.log(response.data)
         // console.log(this.results)
